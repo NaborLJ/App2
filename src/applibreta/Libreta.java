@@ -6,13 +6,13 @@
 package applibreta;
 
 /**
- *
+ * Clase usada para añadir/ver posiciones libres en la Libreta de contactos
  * @author Usuario
  */
 public class Libreta {
-       private String nombre, dni;
+       private String nombre, dni;/** Variable de nombre y dni de contacto */
     private int libre = cualLibre();
-    Contacto[] arrayContactos = new Contacto[3];
+    Contacto[] arrayContactos = new Contacto[3];/** Array donde guardaremos los contactos que querramos añadir/ Especificando limite de array/usuarios */ 
 
     public Libreta() {
         nombre = dni = "";
@@ -30,7 +30,7 @@ public class Libreta {
     public String getDni() {
         return dni;
     }
-
+     /** Metodo para añadir contactos a la libreta. Introduciendo nombre */
     public void engadir() {
         libre = cualLibre();
         if (libre > 0) {
@@ -38,7 +38,7 @@ public class Libreta {
             arrayContactos[libre].setNombre(nombre);
         }
     }
-
+    /** Visualiza las posiciones libres (contactos libres) en la libreta */
     public int cualLibre() {
         for (int libre = 0; libre < arrayContactos.length; libre++) {
             if (arrayContactos[libre].getNombre().equals("")) {
