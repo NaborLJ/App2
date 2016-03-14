@@ -6,7 +6,7 @@
 package applibreta;
 
 /**
- *
+ * Clase Main
  * @author Usuario
  */
 public class AppLibreta {
