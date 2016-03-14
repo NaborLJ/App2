@@ -6,7 +6,7 @@
 package applibreta;
 
 /**
- *
+ * Getters/Setters de los datos básicos de Usuario y un método que los muestra como String
  * @author Usuario
  */
 public class Contacto {
