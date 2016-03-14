@@ -8,13 +8,14 @@ package applibreta;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Crea grupos de contactos en la libreta. EJ:Familiares
  * @author Usuario
  */
 public class Grupo {
      Contacto dueño = new Contacto();
     Contacto [] contactos = new Contacto[10];
     int libre=VerLibre();
+    /** Añade contactos a la libreta*/
     public void añadir(){
         if(libre<0){
             JOptionPane.showMessageDialog(null,"No hay espacio en la libreta");
@@ -22,6 +23,7 @@ public class Grupo {
             IntroducirDatos();
         }
     }
+    /** Muestra espacios libres en la libreta */
         public int VerLibre(){
             for(int i=0;i<contactos.length;i++){
                 if(contactos[i].getNombre().compareTo("")==1){
@@ -31,7 +33,7 @@ public class Grupo {
             return -1;
         }
         
-    
+    /** Datos basicos sobre el contacto que añadimos */
     public Contacto IntroducirDatos(){
      String nombre = JOptionPane.showInputDialog("Introduce el nombre:");
      String apellido = JOptionPane.showInputDialog("Introduce el apellido:");
@@ -40,13 +42,14 @@ public class Grupo {
      Contacto contacto = new Contacto();
         return contacto;
         
-}
+}   /** Recorre la longitud del array/grupo */
     public void Grupo(){
         for(int i=0;i<contactos.length;i++){
             contactos[i].setNombre("");
                 
             }
         }
+    /** Visualiza despues de recorrer los espacios ocupados */
     public void cualOcupado(){
         for(int i=0;i<contactos.length;i++){
         if(contactos[i]!=null){
