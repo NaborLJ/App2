@@ -6,13 +6,13 @@
 package applibreta;
 
 /**
- *
+ * Clase usada para recoger y enviar datos de sesión de Usuario
  * @author nlopezjimenez
  */
 public class Usuario {
-    String nombre;
-    String Pass;
-    int id;
+    String nombre;/** Nombre del usuario */
+    String Pass;/** Contraseña de usuario */
+    int id;/**Id/Nickname/identificador de usuario que utilizará a la hora del loggin */
 
     public Usuario() {
     }
